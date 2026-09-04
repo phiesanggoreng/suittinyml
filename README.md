@@ -4,7 +4,7 @@ Game batu–gunting–kertas berbasis ESP32 untuk mempelajari alur deployment Ti
 
 Model siap pakai sudah tersedia. Anda **tidak perlu melakukan training** untuk memainkan game.
 
-![Panduan menjalankan Suit TinyML di Wokwi](docs/images/wokwi-cara-bermain.png)
+![Panduan menjalankan Suit TinyML di Wokwi](docs/images/Screenshot From 2026-09-05 06-56-47.png)
 
 *Panduan singkat: mulai simulasi, pilih satu tombol, lalu lihat hasil pada OLED. Kabel sengaja tidak ditampilkan, tetapi seluruh koneksi tetap aktif.*
 
