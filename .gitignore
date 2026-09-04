@@ -1,0 +1,17 @@
+# Python
+.venv/
+.build-env/
+__pycache__/
+*.py[cod]
+
+# PlatformIO / editors
+.pio/
+.vscode/
+
+# Generated artifacts
+firmware/
+reports/
+
+# OS files
+.DS_Store
+Thumbs.db

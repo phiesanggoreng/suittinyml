@@ -1,0 +1,4 @@
+Adafruit GFX Library@1.11.11
+Adafruit SH110X@2.1.14
+Adafruit BusIO@1.16.2
+Chirale_TensorFLowLite@2.0.0

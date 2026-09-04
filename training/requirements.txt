@@ -1,0 +1,3 @@
+# Gunakan Python 3.10-3.12. tf.keras sudah disertakan oleh TensorFlow.
+tensorflow==2.17.1
+numpy==1.26.4

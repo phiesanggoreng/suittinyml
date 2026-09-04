@@ -1,0 +1,18 @@
+{
+  "include": [
+    "training",
+    "tests",
+    "tools"
+  ],
+  "exclude": [
+    ".venv",
+    ".build-env",
+    ".pio",
+    "firmware",
+    "reports"
+  ],
+  "venvPath": ".",
+  "venv": ".venv",
+  "pythonVersion": "3.11",
+  "typeCheckingMode": "basic"
+}

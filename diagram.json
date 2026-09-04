@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "author": "TinyML Suit Workshop",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 90,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "board-grove-oled-sh1107",
+      "id": "oled",
+      "top": -40,
+      "left": 230,
+      "attrs": {
+        "i2cAddress": "0x3c"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "buttonRock",
+      "top": 30,
+      "left": -280,
+      "attrs": {
+        "color": "red",
+        "label": "BATU",
+        "key": "1"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "buttonScissors",
+      "top": 145,
+      "left": -280,
+      "attrs": {
+        "color": "yellow",
+        "label": "GUNTING",
+        "key": "2"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "buttonPaper",
+      "top": 260,
+      "left": -280,
+      "attrs": {
+        "color": "blue",
+        "label": "KERTAS",
+        "key": "3"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 270,
+      "left": 245,
+      "attrs": {
+        "volume": "0.1"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "displayTitle",
+      "top": -80,
+      "left": 230,
+      "attrs": {
+        "text": "OLED BESAR 128x128 / HASIL GAME"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "choiceTitle",
+      "top": -5,
+      "left": -280,
+      "attrs": {
+        "text": "PILIHANMU (TEKAN SATU)"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "rockLabel",
+      "top": 10,
+      "left": -280,
+      "attrs": {
+        "text": "1. BATU"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "scissorsLabel",
+      "top": 125,
+      "left": -280,
+      "attrs": {
+        "text": "2. GUNTING"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "paperLabel",
+      "top": 240,
+      "left": -280,
+      "attrs": {
+        "text": "3. KERTAS"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "help",
+      "top": -220,
+      "left": -280,
+      "attrs": {
+        "text": "ATURAN GAME\nTekan satu tombol saja\nBATU > GUNTING\nGUNTING > KERTAS\nKERTAS > BATU\nBuzzer = hasil ronde"
+      }
+    }
+  ],
+  "connections": [
+    ["oled:VCC", "esp:3V3", "", []],
+    ["oled:GND", "esp:GND.1", "", []],
+    ["oled:SDA", "esp:D21", "", []],
+    ["oled:SCL", "esp:D22", "", []],
+    ["buttonRock:1.l", "esp:D25", "", []],
+    ["buttonRock:2.l", "esp:GND.1", "", []],
+    ["buttonScissors:1.l", "esp:D26", "", []],
+    ["buttonScissors:2.l", "esp:GND.1", "", []],
+    ["buttonPaper:1.l", "esp:D27", "", []],
+    ["buttonPaper:2.l", "esp:GND.1", "", []],
+    ["buzzer:1", "esp:GND.2", "", []],
+    ["buzzer:2", "esp:D18", "", []],
+    ["esp:TX0", "$serialMonitor:RX", "", []],
+    ["esp:RX0", "$serialMonitor:TX", "", []]
+  ],
+  "serialMonitor": {
+    "display": "always",
+    "newline": "lf"
+  }
+}
